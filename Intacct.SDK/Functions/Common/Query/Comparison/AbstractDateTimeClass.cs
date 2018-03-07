@@ -25,11 +25,16 @@ namespace Intacct.SDK.Functions.Common.Query.Comparison
         
         public DateTime Value;
 
-        public string Format;
+        public string Format { get; }
 
         protected AbstractDateTimeClass(string format)
         {
             Format = format;
         }
+
+	    protected string ValueAsString()
+	    {
+		    return Value.ToStringByInvariantCulture(Format);
+	    }
     }
 }

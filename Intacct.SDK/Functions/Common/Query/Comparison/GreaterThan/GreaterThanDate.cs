@@ -25,7 +25,7 @@ namespace Intacct.SDK.Functions.Common.Query.Comparison.GreaterThan
                 clause = "NOT ";
             }
             
-            clause = clause + Field + " > '" + Value.ToString(Format) + "'";
+            clause = clause + Field + " > '" + ValueAsString() + "'";
 
             return clause;
         }
